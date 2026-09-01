@@ -35,9 +35,9 @@ observation, level, and trend variances.
 innovation, innovation variance, and log likelihood. Default variances are deterministic heuristics
 scaled from sample variance:
 
-- observation variance: $0.25 \cdot \operatorname{scale}$;
-- level variance: $0.05 \cdot \operatorname{scale}$;
-- trend variance: $0.005 \cdot \operatorname{scale}$.
+- observation variance: $0.25 \cdot \mathrm{scale}$;
+- level variance: $0.05 \cdot \mathrm{scale}$;
+- trend variance: $0.005 \cdot \mathrm{scale}$.
 
 `StateSpaceForecastModel` fits this model to log NAV at every cutoff and converts the terminal
 log-NAV projection into cumulative simple-return distribution outputs.

@@ -8,10 +8,10 @@ The dynamics layer models time-varying behavior in returns without crossing into
 
 $$
 \begin{aligned}
-\operatorname{var}_t
-&= \lambda\operatorname{var}_{t-1} + (1-\lambda)r_{t-1}^{2},\\
-\operatorname{vol}_t
-&= \sqrt{\operatorname{var}_t}
+\mathrm{var}_t
+&= \lambda\mathrm{var}_{t-1} + (1-\lambda)r_{t-1}^{2},\\
+\mathrm{vol}_t
+&= \sqrt{\mathrm{var}_t}
 \end{aligned}
 $$
 
@@ -48,7 +48,7 @@ Main failure cases:
 
 $$
 \begin{aligned}
-\operatorname{state}_t &= [\ell_t, b_t],\\
+\mathrm{state}_t &= [\ell_t, b_t],\\
 \ell_t &= \ell_{t-1} + b_{t-1} + \eta^{(\ell)}_t,\\
 b_t &= b_{t-1} + \eta^{(b)}_t,\\
 y_t &= \ell_t + \varepsilon_t

@@ -36,7 +36,7 @@ $$
 Median simple cumulative return and transformed point forecast:
 
 $$
-\operatorname{Median}(R_{\text{simple}}) = \exp(\mu) - 1
+\mathrm{Median}(R_{\text{simple}}) = \exp(\mu) - 1
 $$
 
 If cumulative log return is modeled as:
@@ -58,7 +58,7 @@ Aletheia exposes both `MedianSimpleReturn` and `ExpectedSimpleReturn`. They are 
 The implementation calculates exact cumulative forecast-error variance for the AR(1) recursion under homoskedastic innovations:
 
 $$
-\operatorname{Var}\left(\sum_{k=1}^{h}e_k\right)
+\mathrm{Var}\left(\sum_{k=1}^{h}e_k\right)
 = \sigma_{\varepsilon}^{2}
   \sum_{m=1}^{h}
   \left(\sum_{j=0}^{h-m}\phi^j\right)^2

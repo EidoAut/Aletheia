@@ -17,7 +17,7 @@ $$
 $$
 
 $$
-\operatorname{ECE}
+\mathrm{ECE}
 = \sum_b \frac{n_b}{N}\left|\hat{o}_b-\bar{p}_b\right|
 $$
 

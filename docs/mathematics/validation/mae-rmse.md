@@ -7,15 +7,15 @@ Point-forecast error metrics compare the forecast return with the realized simpl
 ## Formula
 
 $$
-\operatorname{MAE} = \frac{1}{N}\sum_{i=1}^{N}|y_i-\hat{y}_i|
+\mathrm{MAE} = \frac{1}{N}\sum_{i=1}^{N}|y_i-\hat{y}_i|
 $$
 
 $$
-\operatorname{MSE} = \frac{1}{N}\sum_{i=1}^{N}(y_i-\hat{y}_i)^2
+\mathrm{MSE} = \frac{1}{N}\sum_{i=1}^{N}(y_i-\hat{y}_i)^2
 $$
 
 $$
-\operatorname{RMSE} = \sqrt{\operatorname{MSE}}
+\mathrm{RMSE} = \sqrt{\mathrm{MSE}}
 $$
 
 ## Interpretation

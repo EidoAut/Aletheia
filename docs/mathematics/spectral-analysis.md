@@ -53,13 +53,13 @@ Zero-padding changes the displayed DFT grid. It does not add new physical inform
 Amplitude is reported as a one-sided real-signal amplitude spectrum. Non-DC and non-Nyquist bins use the factor-of-two one-sided scaling. Normalization uses the original sample count, not the padded FFT length. When a Hann window is applied, amplitude is corrected by the actual discrete coherent gain:
 
 $$
-\operatorname{CG} = \frac{1}{N}\sum_{n=0}^{N-1}w_n
+\mathrm{CG} = \frac{1}{N}\sum_{n=0}^{N-1}w_n
 $$
 
 Power is defined from normalized amplitude as:
 
 $$
-\operatorname{Power} = \frac{\operatorname{Amplitude}^2}{2}
+\mathrm{Power} = \frac{\mathrm{Amplitude}^2}{2}
 $$
 
 This is a power spectrum, not a calibrated power spectral density. The dominant non-zero frequency is the positive-frequency bin with the largest power.

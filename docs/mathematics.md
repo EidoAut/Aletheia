@@ -23,12 +23,12 @@ $$
 Skewness uses standardized residuals and the finite-sample Fisher-Pearson correction:
 
 $$
-\operatorname{skew}
+\mathrm{skew}
 = \frac{n}{(n - 1)(n - 2)}
   \sum_{i=1}^{n}\left(\frac{x_i - \bar{x}}{s}\right)^3
 $$
 
-Excess kurtosis uses the unbiased sample adjustment. Non-excess kurtosis is $\operatorname{excess} + 3$.
+Excess kurtosis uses the unbiased sample adjustment. Non-excess kurtosis is $\mathrm{excess} + 3$.
 
 Quantiles use linear interpolation over sorted observations:
 
@@ -54,12 +54,12 @@ Supported modes:
 
 - `ExpandingZScore`: location and scale use observations $0,\ldots,t$.
 - `RollingZScore`: location and scale use the latest rolling window ending at `t`.
-- `RollingRobust`: location is the rolling median and scale is $1.4826 \cdot \operatorname{MAD}$.
+- `RollingRobust`: location is the rolling median and scale is $1.4826 \cdot \mathrm{MAD}$.
 
 The normalized value is:
 
 $$
-z_t = \frac{x_t - \operatorname{location}_t}{\operatorname{scale}_t}
+z_t = \frac{x_t - \mathrm{location}_t}{\mathrm{scale}_t}
 $$
 
 If fewer than `minimumSamples` are available, the point is aligned but marked unavailable. If scale is zero, the point is available with normalized value `0`.

@@ -23,8 +23,8 @@ Periods are expressed in observations, not calendar days. Calendar interpretatio
 Reliability is conservative:
 
 $$
-\operatorname{reliability}
-= \sqrt{\operatorname{relativePower}\cdot\operatorname{rollingStability}}
+\mathrm{reliability}
+= \sqrt{\mathrm{relativePower}\cdot\mathrm{rollingStability}}
 $$
 
 This means a component needs both high relative power and repeated rolling persistence before it receives a strong evidence score.

@@ -9,17 +9,17 @@ Prediction interval coverage checks whether realized returns fall inside a forec
 For `[q10, q90]`:
 
 $$
-\operatorname{ObservedCoverage}
+\mathrm{ObservedCoverage}
 = \frac{\#\{i:q_{10,i}\le y_i \le q_{90,i}\}}{N}
 $$
 
 $$
-\operatorname{NominalCoverage}=0.80
+\mathrm{NominalCoverage}=0.80
 $$
 
 $$
-\operatorname{CoverageError}
-= \operatorname{ObservedCoverage}-\operatorname{NominalCoverage}
+\mathrm{CoverageError}
+= \mathrm{ObservedCoverage}-\mathrm{NominalCoverage}
 $$
 
 ## Interpretation

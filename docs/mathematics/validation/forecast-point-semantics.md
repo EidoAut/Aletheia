@@ -15,7 +15,7 @@ $$
 For absolute-error loss, the population-optimal forecast is generally:
 
 $$
-\hat{y}_{\mathrm{MAE}} = \operatorname{Median}(Y\mid X)
+\hat{y}_{\mathrm{MAE}} = \mathrm{Median}(Y\mid X)
 $$
 
 Aletheia does not yet optimize separately for every loss family. Each forecast records a `PointForecastStatistic` so MAE/RMSE diagnostics identify the principal point value being scored.

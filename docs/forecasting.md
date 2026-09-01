@@ -24,10 +24,10 @@ The point forecast statistic is explicit, so mean and median forecasts are not s
 $$
 \begin{aligned}
 \mu_{T,H} &= \widehat{L}_{T+H} - L_T,\\
-\sigma^2_{T,H} &= \widehat{\operatorname{Var}}(L_{T+H}),\\
-\operatorname{ExpectedSimpleReturn}
+\sigma^2_{T,H} &= \widehat{\mathrm{Var}}(L_{T+H}),\\
+\mathrm{ExpectedSimpleReturn}
 &= \exp\left(\mu_{T,H} + \frac{1}{2}\sigma^2_{T,H}\right)-1,\\
-\operatorname{MedianSimpleReturn}
+\mathrm{MedianSimpleReturn}
 &= \exp(\mu_{T,H})-1
 \end{aligned}
 $$

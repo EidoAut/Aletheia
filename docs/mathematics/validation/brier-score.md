@@ -15,7 +15,7 @@ y_i =
 $$
 
 $$
-\operatorname{BS} = \frac{1}{N}\sum_{i=1}^{N}(p_i-y_i)^2
+\mathrm{BS} = \frac{1}{N}\sum_{i=1}^{N}(p_i-y_i)^2
 $$
 
 ## Interpretation

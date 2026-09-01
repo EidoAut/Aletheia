@@ -25,7 +25,7 @@ The simulator reports nominal percentiles, optional real percentiles, probabilit
 Each path sums sampled log returns over the resolved horizon and converts to simple return:
 
 $$
-\operatorname{simpleReturn}
+\mathrm{simpleReturn}
 = \exp\left(\sum_{t=1}^{h}r_t\right)-1
 $$
 

@@ -15,7 +15,7 @@ $$
 Annualized volatility is:
 
 $$
-s_{\text{annual}} = s_{\text{period}}\sqrt{\operatorname{periods\_per\_year}}
+s_{\text{annual}} = s_{\text{period}}\sqrt{\mathrm{periods\_per\_year}}
 $$
 
 `periods_per_year` is resolved from `ObservationFrequency` by the annualization convention:

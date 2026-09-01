@@ -49,8 +49,8 @@ otherwise      -> Neutral
 Signal strength is:
 
 $$
-\operatorname{strength}
-= \frac{\left|\operatorname{currentAttractivenessScore}-5\right|}{5}
+\mathrm{strength}
+= \frac{\left|\mathrm{currentAttractivenessScore}-5\right|}{5}
 $$
 
 The value is clipped to `[0, 1]`.

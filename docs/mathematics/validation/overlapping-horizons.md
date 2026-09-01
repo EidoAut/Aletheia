@@ -9,7 +9,7 @@ Dense long-horizon forecasts produce target windows that overlap. These should n
 For prediction `i`:
 
 $$
-W_i = (\operatorname{cutoff\_index}_i,\operatorname{target\_index}_i]
+W_i = (\mathrm{cutoff\_index}_i,\mathrm{target\_index}_i]
 $$
 
 Two forecasts overlap when the next window starts on or before the previous target index.
