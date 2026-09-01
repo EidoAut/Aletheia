@@ -1,0 +1,63 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  windows-binary:
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup .NET 8 LTS
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build and test
+        shell: pwsh
+        run: ./scripts/build.ps1 -Configuration Release
+
+      - name: Publish desktop
+        shell: pwsh
+        run: ./scripts/publish-desktop.ps1 -Configuration Release -Runtime win-x64 -SelfContained
+
+      - name: Name release package
+        shell: pwsh
+        run: |
+          $version = '${{ github.ref_name }}'.TrimStart('v')
+          $source = 'artifacts/Aletheia.Desktop-win-x64.zip'
+          $target = "artifacts/Aletheia.Desktop-$version-win-x64.zip"
+          Move-Item -LiteralPath $source -Destination $target -Force
+          "PACKAGE=$target" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Create or update release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = '${{ github.ref_name }}'
+          $version = $tag.TrimStart('v')
+          $notes = @"
+          Aletheia $version Windows desktop binary.
+
+          Download the ZIP, extract it, and run Aletheia.Desktop.exe. The package is self-contained for win-x64 and does not require the .NET SDK.
+
+          Aletheia is a quantitative research and analytical tool. It does not guarantee future investment performance.
+          "@
+
+          gh release view $tag *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $tag $env:PACKAGE --clobber
+          }
+          else {
+            gh release create $tag $env:PACKAGE --title "Aletheia $version" --notes $notes --latest
+          }

@@ -2,6 +2,15 @@
 
 Aletheia is a .NET 8 solution with an optional Python documentation environment.
 
+## Install the Windows App
+
+For non-developer users, download the latest Windows package from
+[GitHub Releases](https://github.com/EidoAut/Aletheia/releases/latest), unzip it, and run
+`Aletheia.Desktop.exe`.
+
+The desktop package is self-contained for `win-x64`, so it does not require installing the .NET SDK.
+Windows may show a SmartScreen prompt because the binary is not code-signed yet.
+
 ## Prerequisites
 
 - Windows is the primary target for the native WinForms desktop application.

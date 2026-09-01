@@ -8,6 +8,14 @@
 
 Aletheia is a quantitative research and analytical tool. It does not guarantee future investment performance.
 
+## Download for Windows
+
+No programming environment is required for the desktop app. Download the latest Windows build from
+[GitHub Releases](https://github.com/EidoAut/Aletheia/releases/latest), unzip it, and run
+`Aletheia.Desktop.exe`.
+
+The Windows package is self-contained for `win-x64`, so users do not need to install the .NET SDK.
+
 ## Wiki
 
 The canonical documentation is now the [Aletheia Wiki](docs/index.md). Start there for installation,
