@@ -715,7 +715,7 @@ public sealed class CnmvIicProvider : IFundCatalogProvider, IProvenanceAwareFund
 
     private static bool ContainsMonthLabel(string value, int expectedMonth)
     {
-        foreach (var part in value.Split([' ', '-', '_', '/', '\\', '.', ','], StringSplitOptions.RemoveEmptyEntries))
+        foreach (var part in value.Split(new[] { ' ', '-', '_', '/', '\\', '.', ',' }, StringSplitOptions.RemoveEmptyEntries))
         {
             if (TryResolveMonth(part, out var month) && month == expectedMonth)
             {
