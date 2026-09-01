@@ -40,6 +40,10 @@ The repository includes `.github/workflows/docs.yml`. To publish:
 3. Set `Build and deployment` source to `GitHub Actions`.
 4. Push to the default branch or run the `Docs` workflow manually.
 
+For private repositories, GitHub Pages also requires a GitHub plan that supports Pages for private
+repos. If Pages is unavailable, the workflow still validates and builds the documentation, then skips
+deployment with a notice instead of failing the build.
+
 The workflow checks navigation coverage, validates local Markdown links, scans for unfinished
 markers, builds with strict mode, and deploys the generated site through GitHub Pages.
 

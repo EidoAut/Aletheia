@@ -91,7 +91,9 @@ mkdocs build --strict
 ```
 
 GitHub Pages deployment is configured in `.github/workflows/docs.yml`. In GitHub repository
-settings, select GitHub Actions as the Pages deployment source.
+settings, select GitHub Actions as the Pages deployment source. Private repositories also require a
+GitHub plan that supports Pages for private repos; otherwise the workflow builds the docs and skips
+deployment with a notice.
 
 ## Project Shape
 
