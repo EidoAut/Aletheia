@@ -1,3 +1,4 @@
+using System.Runtime.ExceptionServices;
 using Aletheia.Desktop;
 using Aletheia.Desktop.Controls;
 
@@ -36,6 +37,7 @@ public sealed class MainFormSmokeTests
             var header = FindControls<Control>(form).Single(control => control.Name == "ShellHeader");
             var brand = FindControls<BrandMarkControl>(form).Single();
 
+            form.ClientSize = form.MinimumSize;
             AssertHeaderActionHasRenderableBounds(headerFunds, "FUNDS");
             AssertHeaderActionHasRenderableBounds(headerSample, "SAMPLE");
             AssertHeaderActionHasRenderableBounds(headerCsv, "OPEN CSV");
@@ -177,7 +179,7 @@ public sealed class MainFormSmokeTests
 
         if (failure is not null)
         {
-            throw failure;
+            ExceptionDispatchInfo.Capture(failure).Throw();
         }
     }
 }
