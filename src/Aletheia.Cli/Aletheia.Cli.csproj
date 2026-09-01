@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aletheia.Core\Aletheia.Core.csproj" />
+    <ProjectReference Include="..\Aletheia.Data\Aletheia.Data.csproj" />
+    <ProjectReference Include="..\Aletheia.Analytics\Aletheia.Analytics.csproj" />
+    <ProjectReference Include="..\Aletheia.Dynamics\Aletheia.Dynamics.csproj" />
+    <ProjectReference Include="..\Aletheia.Spectral\Aletheia.Spectral.csproj" />
+    <ProjectReference Include="..\Aletheia.Forecasting\Aletheia.Forecasting.csproj" />
+    <ProjectReference Include="..\Aletheia.Validation\Aletheia.Validation.csproj" />
+    <ProjectReference Include="..\Aletheia.Application\Aletheia.Application.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

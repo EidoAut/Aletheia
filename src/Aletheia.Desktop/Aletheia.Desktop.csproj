@@ -1,0 +1,170 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aletheia.Application\Aletheia.Application.csproj" />
+    <ProjectReference Include="..\Aletheia.Core\Aletheia.Core.csproj" />
+    <ProjectReference Include="..\Aletheia.Validation\Aletheia.Validation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ScottPlot.WinForms" Version="5.1.59" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Assets\Branding\eido_logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\AnaloguesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\AnaloguesPage.Designer.cs">
+      <DependentUpon>AnaloguesPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\AnaloguesPage.resx">
+      <DependentUpon>AnaloguesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\DynamicsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\DynamicsPage.Designer.cs">
+      <DependentUpon>DynamicsPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\DynamicsPage.resx">
+      <DependentUpon>DynamicsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\ForecastPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\ForecastPage.Designer.cs">
+      <DependentUpon>ForecastPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\ForecastPage.resx">
+      <DependentUpon>ForecastPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\MarketTimingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\MarketTimingPage.Designer.cs">
+      <DependentUpon>MarketTimingPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\MarketTimingPage.resx">
+      <DependentUpon>MarketTimingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\LabPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\LabPage.Designer.cs">
+      <DependentUpon>LabPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\LabPage.resx">
+      <DependentUpon>LabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\ModelArenaPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\ModelArenaPage.Designer.cs">
+      <DependentUpon>ModelArenaPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\ModelArenaPage.resx">
+      <DependentUpon>ModelArenaPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\OverviewPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\OverviewPage.Designer.cs">
+      <DependentUpon>OverviewPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\OverviewPage.resx">
+      <DependentUpon>OverviewPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\PerformancePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\PerformancePage.Designer.cs">
+      <DependentUpon>PerformancePage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\PerformancePage.resx">
+      <DependentUpon>PerformancePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\PredictionsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\PredictionsPage.Designer.cs">
+      <DependentUpon>PredictionsPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\PredictionsPage.resx">
+      <DependentUpon>PredictionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\RiskPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\RiskPage.Designer.cs">
+      <DependentUpon>RiskPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\RiskPage.resx">
+      <DependentUpon>RiskPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\SimulationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\SimulationPage.Designer.cs">
+      <DependentUpon>SimulationPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\SimulationPage.resx">
+      <DependentUpon>SimulationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\SpectralPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\SpectralPage.Designer.cs">
+      <DependentUpon>SpectralPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\SpectralPage.resx">
+      <DependentUpon>SpectralPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\StartPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Pages\ValidationPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\WorkspacePageBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pages\ValidationPage.Designer.cs">
+      <DependentUpon>ValidationPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Pages\ValidationPage.resx">
+      <DependentUpon>ValidationPage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

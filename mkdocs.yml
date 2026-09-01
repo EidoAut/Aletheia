@@ -1,0 +1,232 @@
+site_name: Aletheia Wiki
+site_description: Documentation for Aletheia, an open-source quantitative fund analysis and forecasting platform.
+site_author: Aletheia contributors
+repo_name: aletheia
+repo_url: https://github.com/aletheia
+edit_uri: edit/main/docs/
+use_directory_urls: true
+copyright: "Aletheia 2.7.3 | Scientific 2.12.0-causal-horizon-integrity | MIT License | EIDO Automation"
+
+theme:
+  name: material
+  language: en
+  logo: assets/eido_logo.png
+  favicon: assets/eido_logo.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - content.action.view
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: material/chart-line
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/aletheia.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/vendor/mathjax-3.2.2-tex-svg.js
+  - javascripts/vendor/mermaid-10.9.1.min.js
+  - javascripts/mermaid.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/overview.md
+      - Installation: getting-started/installation.md
+      - First Analysis: getting-started/first-analysis.md
+      - Sample Workflow: getting-started/sample-workflow.md
+  - User Guide:
+      - Desktop Application: user-guide/desktop-application.md
+      - Fund Discovery: user-guide/fund-discovery.md
+      - Loading Data: user-guide/loading-data.md
+      - Overview and Performance: user-guide/overview-and-performance.md
+      - Risk Analysis: user-guide/risk-analysis.md
+      - Dynamics: user-guide/dynamics.md
+      - Spectral Analysis: user-guide/spectral-analysis.md
+      - Historical Analogues: user-guide/historical-analogues.md
+      - Forecasting: user-guide/forecasting.md
+      - Model Arena: user-guide/model-arena.md
+      - Market Timing: user-guide/market-timing.md
+      - Validation: user-guide/validation.md
+      - Simulation: user-guide/simulation.md
+      - Predictions Ledger: user-guide/predictions-ledger.md
+      - Research Reports: user-guide/research-reports.md
+  - Concepts:
+      - Quantitative Foundations: concepts/quantitative-foundations.md
+      - Returns and Annualization: concepts/returns-and-annualization.md
+      - Observation Frequency: concepts/observation-frequency.md
+      - Forecast Horizons: concepts/forecast-horizons.md
+      - Uncertainty and Probability: concepts/uncertainty-and-probability.md
+      - Causality and Look-Ahead: concepts/causality-and-look-ahead.md
+      - Decision Signals: concepts/decision-signals.md
+      - Actionability: concepts/actionability.md
+      - Data Provenance: concepts/data-provenance.md
+  - Models:
+      - Overview: models/overview.md
+      - Baseline Models: models/baseline-models.md
+      - AR(1): models/ar1.md
+      - Kalman: models/kalman.md
+      - GARCH(1,1): models/garch.md
+      - Hidden Markov Model: models/hidden-markov-model.md
+      - Historical Analogues: models/historical-analogues.md
+      - Spectral Methods: models/spectral-methods.md
+      - Ensembles: models/ensembles.md
+      - Market-Timing Models: models/market-timing-models.md
+  - Validation:
+      - Philosophy: validation/philosophy.md
+      - Walk-Forward Validation: validation/walk-forward-validation.md
+      - Nested Model Selection: validation/nested-model-selection.md
+      - Frozen Holdout: validation/frozen-holdout.md
+      - Common Support: validation/common-support.md
+      - Calibration: validation/calibration.md
+      - Forecast Metrics: validation/forecast-metrics.md
+      - Economic Backtesting: validation/economic-backtesting.md
+      - Limitations: validation/limitations.md
+  - Mathematical Notes:
+      - Mathematics: mathematics.md
+      - Returns: mathematics/returns.md
+      - Annualization: mathematics/annualization.md
+      - Temporal Semantics: mathematics/temporal-semantics.md
+      - State Schema Identity: mathematics/state-schema.md
+      - Dynamic State: mathematics/dynamic-state.md
+      - Numerical Derivatives: mathematics/numerical-derivatives.md
+      - Volatility: mathematics/volatility.md
+      - Drawdown: mathematics/drawdown.md
+      - PCA: mathematics/pca.md
+      - AR(1): mathematics/ar1.md
+      - Forecasting: mathematics/forecasting.md
+      - Spectral Analysis: mathematics/spectral-analysis.md
+      - Historical Analogues: mathematics/historical-analogues.md
+      - Investment-Plan Simulation: mathematics/investment-plan-simulation.md
+      - Prediction Records: mathematics/prediction-records.md
+      - Validation Metrics:
+          - Walk-Forward Validation: mathematics/validation/walk-forward-validation.md
+          - Model Arena: mathematics/validation/model-arena.md
+          - Forecast Capabilities: mathematics/validation/forecast-capabilities.md
+          - Forecast Point Semantics: mathematics/validation/forecast-point-semantics.md
+          - Model Baselines: mathematics/validation/model-baselines.md
+          - Common-Support Evaluation: mathematics/validation/common-support-evaluation.md
+          - Overlapping Horizons: mathematics/validation/overlapping-horizons.md
+          - MAE, MSE, and RMSE: mathematics/validation/mae-rmse.md
+          - Directional Accuracy: mathematics/validation/directional-accuracy.md
+          - Brier Score: mathematics/validation/brier-score.md
+          - Calibration: mathematics/validation/calibration.md
+          - Pinball Loss: mathematics/validation/pinball-loss.md
+          - Interval Coverage: mathematics/validation/interval-coverage.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Detailed Architecture: architecture.md
+      - Project Structure: architecture/project-structure.md
+      - Application Layer: architecture/application-layer.md
+      - Data Layer: architecture/data-layer.md
+      - Data Provenance: architecture/data-provenance.md
+      - Prediction Ledger: architecture/prediction-ledger.md
+      - Prediction Ledger Integrity: architecture/prediction-ledger-integrity.md
+      - Desktop Architecture: architecture/desktop-architecture.md
+      - Reproducibility: architecture/reproducibility.md
+  - Development:
+      - Build and Test: development/build-and-test.md
+      - Repository Guide: development/repository-guide.md
+      - Coding Conventions: development/coding-conventions.md
+      - Adding a Model: development/adding-a-model.md
+      - Adding a Data Provider: development/adding-a-data-provider.md
+      - Adding a Page or Surface: development/adding-a-page-or-surface.md
+      - Release Process: development/release-process.md
+  - Reference:
+      - CLI Reference: reference/cli-reference.md
+      - Configuration: reference/configuration.md
+      - Terminology: reference/terminology.md
+      - Troubleshooting: reference/troubleshooting.md
+      - FAQ: reference/faq.md
+      - Source Map: reference/source-map.md
+      - Documentation Site: reference/documentation-site.md
+  - Desktop Engineering Notes:
+      - Architecture: desktop/architecture.md
+      - Navigation: desktop/navigation.md
+      - Theme: desktop/theme.md
+      - Charting: desktop/charting.md
+      - Simulation Page: desktop/simulation.md
+  - Scientific Notes:
+      - Forecasting: forecasting.md
+      - Market Timing: market-timing.md
+      - Simulation: simulation.md
+      - Scoring: scoring.md
+      - Decision Signals: decision-signals.md
+      - Dynamics: dynamics.md
+      - Spectral Analysis: spectral-analysis.md
+      - Validation: validation.md
+      - Economic Timing Backtesting: backtesting.md
+  - Releases:
+      - 2.5.3: releases/2.5.3.md
+      - 2.6.0: releases/2.6.0.md
+      - Desktop 2.5: releases/desktop-2.5.md
+      - Milestone 2.4: releases/milestone-2.4.md

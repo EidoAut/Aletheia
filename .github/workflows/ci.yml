@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test-publish:
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8 LTS
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build and test
+        shell: pwsh
+        run: ./scripts/build.ps1 -Configuration Release
+
+      - name: Publish desktop
+        shell: pwsh
+        run: ./scripts/publish-desktop.ps1 -Configuration Release -Runtime win-x64 -SelfContained
+
+      - name: Upload desktop package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Aletheia.Desktop-win-x64
+          path: artifacts/Aletheia.Desktop-win-x64.zip
+          if-no-files-found: error

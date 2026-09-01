@@ -1,0 +1,117 @@
+name: Docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install documentation dependencies
+        run: pip install -r requirements-docs.txt
+
+      - name: Validate navigation coverage
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import yaml
+
+          cfg = yaml.load(Path("mkdocs.yml").read_text(encoding="utf-8"), Loader=yaml.Loader)
+          nav = cfg["nav"]
+
+          def collect(items):
+              found = set()
+              for item in items:
+                  if isinstance(item, str):
+                      found.add(item)
+                  elif isinstance(item, dict):
+                      for value in item.values():
+                          if isinstance(value, str):
+                              found.add(value)
+                          else:
+                              found |= collect(value)
+              return found
+
+          nav_files = collect(nav)
+          docs_files = {str(path.relative_to("docs")).replace("\\", "/") for path in Path("docs").rglob("*.md")}
+          missing = sorted(docs_files - nav_files)
+          unknown = sorted(nav_files - docs_files)
+          if missing or unknown:
+              if missing:
+                  print("Markdown files missing from nav:")
+                  print("\n".join(missing))
+              if unknown:
+                  print("Nav entries with no file:")
+                  print("\n".join(unknown))
+              raise SystemExit(1)
+          PY
+
+      - name: Validate Markdown links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          files = [Path("README.md"), Path("CHANGELOG.md")]
+          files.extend(sorted(Path("docs").rglob("*.md")))
+          errors = []
+
+          for file in files:
+              text = file.read_text(encoding="utf-8")
+              for match in re.finditer(r"\[[^\]]+\]\(([^)]+)\)", text):
+                  target = match.group(1).strip()
+                  if not target or re.match(r"^(https?:|mailto:|#)", target):
+                      continue
+                  path = target.split("#", 1)[0]
+                  if not path:
+                      continue
+                  if not (file.parent / path).resolve().exists():
+                      errors.append(f"{file}:{match.start()} -> {target}")
+
+          if errors:
+              print("Broken local Markdown links:")
+              print("\n".join(errors))
+              raise SystemExit(1)
+          PY
+
+      - name: Check for unfinished markers
+        run: |
+          ! grep -RInE '\b(TODO|TBD|FIXME)\b' docs README.md CHANGELOG.md
+
+      - name: Build strict documentation site
+        run: mkdocs build --strict
+
+      - name: Setup GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/deploy-pages@v4
