@@ -1,7 +1,7 @@
 # Aletheia
 
 <p align="center">
-  <img src="docs/assets/eido_logo.png" alt="Aletheia by EIDO" width="220" />
+  <img src="docs/assets/aletheia-overview.png" alt="Aletheia desktop overview" width="100%" />
 </p>
 
 **Aletheia is an open-source quantitative fund analysis and forecasting platform written in C# that models investment funds as stochastic dynamic systems. It combines time-series analysis, dynamic-state modeling, signal processing, probabilistic forecasting and rigorous out-of-sample validation to study market states, transitions and investment hypotheses.**
