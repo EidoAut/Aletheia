@@ -10,3 +10,15 @@ window.MathJax = {
     processHtmlClass: "arithmatex"
   }
 };
+
+function typesetAletheiaMath() {
+  if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+    window.MathJax.typesetPromise();
+  }
+}
+
+if (typeof document$ !== "undefined") {
+  document$.subscribe(typesetAletheiaMath);
+} else {
+  document.addEventListener("DOMContentLoaded", typesetAletheiaMath);
+}
