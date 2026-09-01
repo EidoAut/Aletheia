@@ -6,13 +6,13 @@ Directional accuracy measures whether the forecast and realized return have the 
 
 ## Formula
 
-\[
+$$
 \operatorname{DA}
 = \frac{
   \#\{i:\operatorname{direction\_rule}(\operatorname{forecast}_i)
   = \operatorname{direction}(y_i)\}
 }{N}
-\]
+$$
 
 ## Interpretation
 
@@ -28,4 +28,4 @@ If most realized returns are positive, a simple positive-bias model may score we
 
 ## Implementation Notes
 
-`DirectionClassifier` treats \(|\operatorname{return}| \le \operatorname{tolerance}\) as flat. The default tolerance is zero. `DirectionPredictionRule` records whether predicted direction came from the point forecast, median, or probability-positive threshold.
+`DirectionClassifier` treats $|\operatorname{return}| \le \operatorname{tolerance}$ as flat. The default tolerance is zero. `DirectionPredictionRule` records whether predicted direction came from the point forecast, median, or probability-positive threshold.

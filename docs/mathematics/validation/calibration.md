@@ -8,18 +8,18 @@ Calibration compares predicted positive-return probabilities with observed posit
 
 For each probability bin `b`:
 
-\[
+$$
 \bar{p}_b = \frac{1}{n_b}\sum_{i\in b}p_i
-\]
+$$
 
-\[
+$$
 \hat{o}_b = \frac{1}{n_b}\sum_{i\in b}y_i
-\]
+$$
 
-\[
+$$
 \operatorname{ECE}
 = \sum_b \frac{n_b}{N}\left|\hat{o}_b-\bar{p}_b\right|
-\]
+$$
 
 ## Interpretation
 

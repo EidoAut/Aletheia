@@ -43,11 +43,11 @@ Periodic contribution baselines remain in the investment-plan simulator. They sh
 
 Costs are charged when exposure changes:
 
-\[
+$$
 \operatorname{cost}_t
 = V_t\left|\operatorname{targetExposure}_t-\operatorname{exposure}_{t-1}\right|
   \left(\operatorname{transactionCost}+\operatorname{slippage}\right)
-\]
+$$
 
 The result includes cumulative and annualized return, annualized volatility, Sharpe, Sortino, maximum drawdown, Calmar, total turnover, time in market, trade count, and the full normalized value path.
 

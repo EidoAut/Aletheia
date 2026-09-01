@@ -11,12 +11,12 @@ The question is: "When this fund looked similar in the past, what happened over 
 
 Aletheia compares state vectors over compatible dimensions. A standardized distance has the form:
 
-\[
+$$
 d(x, y) = \sqrt{\frac{1}{k}\sum_{j=1}^{k}\left(\frac{x_j - y_j}{s_j}\right)^2}
-\]
+$$
 
-where \(x\) is the current state, \(y\) is a candidate historical state, \(k\) is the number of
-comparable features, and \(s_j\) is a feature scale. Timing analogues use robust median/MAD scaling.
+where $x$ is the current state, $y$ is a candidate historical state, $k$ is the number of
+comparable features, and $s_j$ is a feature scale. Timing analogues use robust median/MAD scaling.
 
 ## Implementation in Aletheia
 

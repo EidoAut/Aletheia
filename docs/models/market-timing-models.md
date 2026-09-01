@@ -9,7 +9,7 @@ specific horizon: upside barrier first, downside barrier first, or no barrier hi
 
 ## Event Definition
 
-For starting NAV \(P_t\), upside threshold \(u\), downside threshold \(d\), and horizon \(h\):
+For starting NAV $P_t$, upside threshold $u$, downside threshold $d$, and horizon $h$:
 
 - `UpperHitFirst` occurs if the upper return barrier is reached first.
 - `LowerHitFirst` occurs if the lower return barrier is reached first.

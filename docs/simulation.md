@@ -24,10 +24,10 @@ The simulator reports nominal percentiles, optional real percentiles, probabilit
 
 Each path sums sampled log returns over the resolved horizon and converts to simple return:
 
-\[
+$$
 \operatorname{simpleReturn}
 = \exp\left(\sum_{t=1}^{h}r_t\right)-1
-\]
+$$
 
 The output includes raw samples and a `ForecastDistribution` built from the samples. It is still labeled as simulation evidence, not a validated forecast.
 

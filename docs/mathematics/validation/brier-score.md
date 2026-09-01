@@ -6,17 +6,17 @@ Brier score evaluates probability forecasts for `R > 0`.
 
 ## Formula
 
-\[
+$$
 y_i =
 \begin{cases}
 1, & R_i > 0,\\
 0, & R_i \le 0
 \end{cases}
-\]
+$$
 
-\[
+$$
 \operatorname{BS} = \frac{1}{N}\sum_{i=1}^{N}(p_i-y_i)^2
-\]
+$$
 
 ## Interpretation
 

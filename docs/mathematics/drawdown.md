@@ -6,9 +6,9 @@ Drawdown measures loss from a running high-water mark.
 
 ## Equation
 
-\[
+$$
 D_t = \frac{P_t}{\max(P_0,\ldots,P_t)} - 1
-\]
+$$
 
 Maximum drawdown is the minimum value of `D_t`.
 

@@ -8,14 +8,14 @@ Walk-forward validation evaluates a model as if each historical forecast had bee
 
 For cutoff `t` and horizon `h`:
 
-\[
+$$
 \begin{aligned}
 \text{Train} &: x_1,\ldots,x_t,\\
 \text{Predict} &: R_{t,t+h},\\
 \text{Observe} &: \operatorname{realized}(R_{t,t+h}),\\
 \text{Score} &: \operatorname{forecast}\ \text{versus realized return}
 \end{aligned}
-\]
+$$
 
 ## Interpretation
 

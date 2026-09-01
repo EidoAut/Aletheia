@@ -9,14 +9,14 @@ periods tend to follow volatile periods. GARCH captures that persistence in cond
 
 ## Mathematical Definition
 
-For centered return \(e_t\), the conditional variance is:
+For centered return $e_t$, the conditional variance is:
 
-\[
+$$
 \sigma_t^2 = \omega + \alpha e_{t-1}^2 + \beta \sigma_{t-1}^2
-\]
+$$
 
-where \(\omega\) is the long-run variance component, \(\alpha\) weights the lagged shock, and
-\(\beta\) weights prior conditional variance.
+where $\omega$ is the long-run variance component, $\alpha$ weights the lagged shock, and
+$\beta$ weights prior conditional variance.
 
 ## Implementation in Aletheia
 
@@ -26,7 +26,7 @@ where \(\omega\) is the long-run variance component, \(\alpha\) weights the lagg
 - validates finite input;
 - rejects near-constant series;
 - searches deterministic constrained parameter grids;
-- keeps \(\alpha + \beta < 1\) through admissibility checks;
+- keeps $\alpha + \beta < 1$ through admissibility checks;
 - reports convergence, likelihood, parameters, conditional variances, and diagnostics.
 
 Market-timing features use GARCH conditional volatility when it has converged. Otherwise Aletheia

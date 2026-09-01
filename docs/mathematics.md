@@ -16,23 +16,23 @@ This layer provides deterministic numeric primitives used by analytics, dynamics
 
 Variance is calculated as:
 
-\[
+$$
 s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n - 1}
-\]
+$$
 
 Skewness uses standardized residuals and the finite-sample Fisher-Pearson correction:
 
-\[
+$$
 \operatorname{skew}
 = \frac{n}{(n - 1)(n - 2)}
   \sum_{i=1}^{n}\left(\frac{x_i - \bar{x}}{s}\right)^3
-\]
+$$
 
-Excess kurtosis uses the unbiased sample adjustment. Non-excess kurtosis is \(\operatorname{excess} + 3\).
+Excess kurtosis uses the unbiased sample adjustment. Non-excess kurtosis is $\operatorname{excess} + 3$.
 
 Quantiles use linear interpolation over sorted observations:
 
-\[
+$$
 \begin{aligned}
 a &= p(n - 1),\\
 j &= \lfloor a \rfloor,\\
@@ -40,9 +40,9 @@ k &= \lceil a \rceil,\\
 w &= a - j,\\
 q(p) &= x_{[j]} + \left(x_{[k]} - x_{[j]}\right)w
 \end{aligned}
-\]
+$$
 
-Here \(x_{[j]}\) and \(x_{[k]}\) are zero-based positions in the sorted sample.
+Here $x_{[j]}$ and $x_{[k]}$ are zero-based positions in the sorted sample.
 
 Autocorrelation at lag `k` uses the full-sample mean and denominator, and partial autocorrelation is estimated by the Durbin-Levinson recursion from lag 1 through the requested maximum lag.
 
@@ -52,15 +52,15 @@ Autocorrelation at lag `k` uses the full-sample mean and denominator, and partia
 
 Supported modes:
 
-- `ExpandingZScore`: location and scale use observations \(0,\ldots,t\).
+- `ExpandingZScore`: location and scale use observations $0,\ldots,t$.
 - `RollingZScore`: location and scale use the latest rolling window ending at `t`.
-- `RollingRobust`: location is the rolling median and scale is \(1.4826 \cdot \operatorname{MAD}\).
+- `RollingRobust`: location is the rolling median and scale is $1.4826 \cdot \operatorname{MAD}$.
 
 The normalized value is:
 
-\[
+$$
 z_t = \frac{x_t - \operatorname{location}_t}{\operatorname{scale}_t}
-\]
+$$
 
 If fewer than `minimumSamples` are available, the point is aligned but marked unavailable. If scale is zero, the point is available with normalized value `0`.
 

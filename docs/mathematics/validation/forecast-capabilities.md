@@ -21,7 +21,7 @@ Metrics are capability-gated. MAE and RMSE require `PointForecast`; Brier score 
 
 ## Zero-Return Baseline
 
-The zero-return model is a point baseline. It does not advertise `ProbabilityPositive` and does not fabricate quantiles. A deterministic forecast \(R = 0\) cannot also be used as a neutral \(P(R > 0) = 0.5\) probability forecast.
+The zero-return model is a point baseline. It does not advertise `ProbabilityPositive` and does not fabricate quantiles. A deterministic forecast $R = 0$ cannot also be used as a neutral $P(R > 0) = 0.5$ probability forecast.
 
 ## Implementation Notes
 

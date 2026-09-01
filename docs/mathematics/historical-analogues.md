@@ -10,9 +10,9 @@ Historical analogue search asks:
 
 Milestone 1 uses standardized Euclidean distance:
 
-\[
+$$
 d(x,y) = \sqrt{\sum_{i=1}^{k}\left(\frac{x_i-y_i}{s_i}\right)^2}
-\]
+$$
 
 where `s_i` is the historical standard deviation of dimension `i`.
 

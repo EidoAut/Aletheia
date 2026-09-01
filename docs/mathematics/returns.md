@@ -6,17 +6,17 @@ Returns convert NAV levels into scale-independent quantities suitable for statis
 
 ## Simple Return
 
-\[
+$$
 R_t = \frac{P_t - P_{t-1}}{P_{t-1}}
-\]
+$$
 
 Simple returns are intuitive and are used for performance reporting.
 
 ## Log Return
 
-\[
+$$
 r_t = \ln\left(\frac{P_t}{P_{t-1}}\right)
-\]
+$$
 
 Log returns are additive across consecutive periods and are used by forecasting and simulation baselines.
 

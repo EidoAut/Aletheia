@@ -15,23 +15,23 @@ Milestone 1.1 derivatives are computed over observation index, not elapsed calen
 
 Let:
 
-\[
+$$
 L_t = \ln(P_t)
-\]
+$$
 
 where `P_t` is NAV at observation index `t`.
 
 First derivative per observation:
 
-\[
+$$
 v_t \approx L_t - L_{t-1}
-\]
+$$
 
 Second derivative per observation squared:
 
-\[
+$$
 a_t \approx L_t - 2L_{t-1} + L_{t-2}
-\]
+$$
 
 ## Important Note
 

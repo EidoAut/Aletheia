@@ -9,13 +9,13 @@ dominant observation-index periodicities and rolling spectral stability.
 
 ## Mathematical Definition
 
-For observations \(x_0,\ldots,x_{n-1}\), the discrete Fourier transform is:
+For observations $x_0,\ldots,x_{n-1}$, the discrete Fourier transform is:
 
-\[
+$$
 X_k = \sum_{t=0}^{n-1} x_t e^{-2\pi i k t/n}
-\]
+$$
 
-Power is based on the squared magnitude of \(X_k\), with Aletheia's implementation documenting
+Power is based on the squared magnitude of $X_k$, with Aletheia's implementation documenting
 normalization metadata.
 
 ## Implementation in Aletheia

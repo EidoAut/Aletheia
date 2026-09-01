@@ -20,17 +20,17 @@ earned trust.
 
 Zero-return point forecast:
 
-\[
+$$
 \hat{r}_{t,h} = 0
-\]
+$$
 
 Historical positive-return probability:
 
-\[
+$$
 \hat{p}_{t,h} = \frac{1}{n}\sum_{i=1}^{n} I(r_{i,h} > 0)
-\]
+$$
 
-where \(r_{i,h}\) is a completed horizon return inside the training window and \(I\) is an indicator.
+where $r_{i,h}$ is a completed horizon return inside the training window and $I$ is an indicator.
 
 ## Implementation in Aletheia
 

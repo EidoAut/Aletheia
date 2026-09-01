@@ -12,21 +12,21 @@ state estimates as new observations arrive and can project the level forward wit
 
 Observation equation:
 
-\[
+$$
 y_t = \ell_t + \eta_t
-\]
+$$
 
 State transition:
 
-\[
+$$
 \ell_t = \ell_{t-1} + b_{t-1} + \zeta_t
-\]
+$$
 
-\[
+$$
 b_t = b_{t-1} + \xi_t
-\]
+$$
 
-where \(y_t\) is log NAV, \(\ell_t\) is latent level, \(b_t\) is trend, and noise terms carry
+where $y_t$ is log NAV, $\ell_t$ is latent level, $b_t$ is trend, and noise terms carry
 observation, level, and trend variances.
 
 ## Implementation in Aletheia
@@ -35,9 +35,9 @@ observation, level, and trend variances.
 innovation, innovation variance, and log likelihood. Default variances are deterministic heuristics
 scaled from sample variance:
 
-- observation variance: \(0.25 \cdot \operatorname{scale}\);
-- level variance: \(0.05 \cdot \operatorname{scale}\);
-- trend variance: \(0.005 \cdot \operatorname{scale}\).
+- observation variance: $0.25 \cdot \operatorname{scale}$;
+- level variance: $0.05 \cdot \operatorname{scale}$;
+- trend variance: $0.005 \cdot \operatorname{scale}$.
 
 `StateSpaceForecastModel` fits this model to log NAV at every cutoff and converts the terminal
 log-NAV projection into cumulative simple-return distribution outputs.

@@ -6,15 +6,15 @@ Pinball loss evaluates forecast quantiles.
 
 ## Formula
 
-For quantile level \(\tau\) and forecast quantile \(q\):
+For quantile level $\tau$ and forecast quantile $q$:
 
-\[
+$$
 L_{\tau}(y,q)=
 \begin{cases}
 \tau(y-q), & y \ge q,\\
 (1-\tau)(q-y), & y < q
 \end{cases}
-\]
+$$
 
 ## Interpretation
 

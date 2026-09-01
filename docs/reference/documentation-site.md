@@ -50,4 +50,5 @@ markers, builds with strict mode, and deploys the generated site through GitHub 
 ## Raw Markdown
 
 All content remains readable directly under `docs/`. Relative links between documentation pages are
-kept valid for GitHub browsing as well as the generated MkDocs site.
+kept valid for GitHub browsing as well as the generated MkDocs site. Mathematical expressions use
+GitHub-compatible delimiters: `$...$` for inline expressions and `$$...$$` for display equations.

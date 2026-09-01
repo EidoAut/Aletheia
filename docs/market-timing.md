@@ -20,11 +20,11 @@ Labels are assigned by `TripleBarrierLabeler` as:
 
 Barriers can use fixed percentage thresholds or volatility-scaled thresholds. Volatility-scaled barriers use only causal volatility values available at the label start. If volatility is unavailable or non-finite at that start, the label is skipped rather than falling back to a fabricated threshold.
 
-Each label stores both `StartIndex` and \(\operatorname{EndIndex}=\operatorname{StartIndex}+\operatorname{TimeToEvent}\). A label is eligible for training only after its `EndIndex` has passed the prediction cutoff plus any purge/embargo requirement.
+Each label stores both `StartIndex` and $\operatorname{EndIndex}=\operatorname{StartIndex}+\operatorname{TimeToEvent}$. A label is eligible for training only after its `EndIndex` has passed the prediction cutoff plus any purge/embargo requirement.
 
 ## Causal Feature Pipeline
 
-`MarketTimingFeaturePipeline` builds one feature vector per eligible observation. Every historical feature is computed from the prefix that would have been available at that observation. For cutoff \(T\), Aletheia uses observations up to \(T\), updates causal volatility/Kalman/HMM/change-point state from that prefix, builds `FeatureVector(T)`, and only then evaluates outcomes after \(T\).
+`MarketTimingFeaturePipeline` builds one feature vector per eligible observation. Every historical feature is computed from the prefix that would have been available at that observation. For cutoff $T$, Aletheia uses observations up to $T$, updates causal volatility/Kalman/HMM/change-point state from that prefix, builds `FeatureVector(T)`, and only then evaluates outcomes after $T$.
 
 The feature set includes:
 
@@ -52,7 +52,7 @@ The application uses a lightweight automatic preview profile when loading ordina
 - competing-risk hazard model;
 - spectral timing candidate.
 
-Each candidate must compete against a simple baseline through horizon-specific walk-forward evaluations. For a prediction cutoff \(T\), training labels must satisfy \(\operatorname{EndIndex} \le T-\operatorname{purge}-\operatorname{embargo}\); the out-of-sample label's realized duration is never used to decide its own training cutoff. The ensemble weights only eligible candidates with enough OOS samples for that horizon, acceptable calibration, positive baseline-relative Brier skill, and a non-negative lower bootstrap bound for that skill. Rejected models remain visible with sample counts, Brier, ECE, log loss, calibration status, eligibility, ensemble weight, and rejection reason.
+Each candidate must compete against a simple baseline through horizon-specific walk-forward evaluations. For a prediction cutoff $T$, training labels must satisfy $\operatorname{EndIndex} \le T-\operatorname{purge}-\operatorname{embargo}$; the out-of-sample label's realized duration is never used to decide its own training cutoff. The ensemble weights only eligible candidates with enough OOS samples for that horizon, acceptable calibration, positive baseline-relative Brier skill, and a non-negative lower bootstrap bound for that skill. Rejected models remain visible with sample counts, Brier, ECE, log loss, calibration status, eligibility, ensemble weight, and rejection reason.
 
 Competing-risk hazards are reported as unconditional cumulative-incidence diagnostics, not as independent ensemble diversity. The spectral timing candidate is currently experimental and remains ineligible until causal historical spectral features are reconstructed for OOS validation.
 

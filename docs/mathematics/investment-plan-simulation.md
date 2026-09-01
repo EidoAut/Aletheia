@@ -16,7 +16,7 @@ The active fund supplies historical per-observation log returns and an explicit 
 
 ## Moment scaling
 
-Let the historical log returns be \(r_1,\ldots,r_n\), with sample mean \(\mu\) and sample standard deviation \(\sigma\). Aletheia maps the declared observation frequency to periods per year \(f\):
+Let the historical log returns be $r_1,\ldots,r_n$, with sample mean $\mu$ and sample standard deviation $\sigma$. Aletheia maps the declared observation frequency to periods per year $f$:
 
 - calendar daily: `365.25`;
 - business daily: `252`;
@@ -25,21 +25,21 @@ Let the historical log returns be \(r_1,\ldots,r_n\), with sample mean \(\mu\) a
 
 The number of historical observation periods represented by one month is
 
-\[
+$$
 m = \frac{f}{12}
-\]
+$$
 
 The Gaussian baseline then uses
 
-\[
+$$
 \mu_{\text{month}} = m\mu
-\]
+$$
 
 and
 
-\[
+$$
 \sigma_{\text{month}} = \sqrt{m}\sigma
-\]
+$$
 
 This scaling assumes independent increments with stable historical moments. It is a modeling convention, not evidence that the fund actually follows a Gaussian process.
 
@@ -49,10 +49,10 @@ Irregular observations are deliberately rejected because they do not imply a uni
 
 For path `j` and month `t`, Aletheia draws `Z(j,t)` from a standard normal distribution and applies
 
-\[
+$$
 B_{j,t}
 = B_{j,t-1}\exp\left(\mu_{\text{month}} + \sigma_{\text{month}}Z_{j,t}\right) + c
-\]
+$$
 
 The contribution is added at the end of each simulated month. Therefore, the final contribution has no simulated return before the terminal measurement.
 

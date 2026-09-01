@@ -5,11 +5,11 @@ these units can make results look more precise than they are.
 
 ## Simple Return
 
-For NAV values \(P_{t-1}\) and \(P_t\), simple return is:
+For NAV values $P_{t-1}$ and $P_t$, simple return is:
 
-\[
+$$
 r_t = \frac{P_t}{P_{t-1}} - 1
-\]
+$$
 
 Simple returns are intuitive for investor-facing percentages.
 
@@ -17,9 +17,9 @@ Simple returns are intuitive for investor-facing percentages.
 
 Log return is:
 
-\[
+$$
 g_t = \log(P_t) - \log(P_{t-1})
-\]
+$$
 
 Log returns add naturally over time and are used in several modeling paths.
 

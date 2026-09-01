@@ -15,9 +15,9 @@ A period of 20 observations must not be read as 20 calendar days unless the inpu
 
 The discrete Fourier transform is:
 
-\[
+$$
 X_k = \sum_{n=0}^{N-1}x_n\exp\left(-i\frac{2\pi kn}{N}\right)
-\]
+$$
 
 Milestone 1.2 implements a radix-2 Cooley-Tukey FFT, optional zero-padding to a power of two, and a direct DFT fallback when zero-padding is disabled for non-power-of-two inputs.
 
@@ -31,9 +31,9 @@ Before the FFT, the analyzer validates finite input values and applies the confi
 
 The Hann window is:
 
-\[
+$$
 w_n = \frac{1}{2}\left(1-\cos\left(\frac{2\pi n}{N-1}\right)\right)
-\]
+$$
 
 Windowing reduces spectral leakage by tapering the endpoints before the signal is interpreted as periodic by the discrete Fourier transform. Linear detrending is explicit because removing a trend changes the signal being analyzed.
 
@@ -52,15 +52,15 @@ Zero-padding changes the displayed DFT grid. It does not add new physical inform
 
 Amplitude is reported as a one-sided real-signal amplitude spectrum. Non-DC and non-Nyquist bins use the factor-of-two one-sided scaling. Normalization uses the original sample count, not the padded FFT length. When a Hann window is applied, amplitude is corrected by the actual discrete coherent gain:
 
-\[
+$$
 \operatorname{CG} = \frac{1}{N}\sum_{n=0}^{N-1}w_n
-\]
+$$
 
 Power is defined from normalized amplitude as:
 
-\[
+$$
 \operatorname{Power} = \frac{\operatorname{Amplitude}^2}{2}
-\]
+$$
 
 This is a power spectrum, not a calibrated power spectral density. The dominant non-zero frequency is the positive-frequency bin with the largest power.
 The result exposes diagnostic quantities such as peak power fraction and peak-to-background ratio. These are not statistical confidence probabilities.

@@ -8,9 +8,9 @@ Aletheia forecasts distributions, not exact future NAV values.
 
 Conceptually, forecasting estimates:
 
-\[
+$$
 P(r_{t,t+h}\mid x_t)
-\]
+$$
 
 where `x_t` is the current reconstructed state and `h` is the horizon.
 

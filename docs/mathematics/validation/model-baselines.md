@@ -12,9 +12,9 @@ The point baseline is `Zero Return`. It provides a deterministic zero simple-ret
 
 The probability baseline is `Historical Probability Climatology`. It estimates `P(return > 0)` from completed horizon outcomes inside the training window only:
 
-\[
+$$
 p_t = \frac{\#\{i:R_{i,h}>0\}}{N}
-\]
+$$
 
 It is a Brier/calibration baseline and does not claim point forecasts or quantiles.
 

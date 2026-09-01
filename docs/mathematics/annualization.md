@@ -15,10 +15,10 @@ Annualization converts a per-observation statistic into an annualized statistic.
 
 For volatility:
 
-\[
+$$
 \sigma_{\text{annual}}
 = \sigma_{\text{period}}\sqrt{\operatorname{periods\_per\_year}}
-\]
+$$
 
 Sharpe and Sortino use the same periods-per-year value to convert annual risk-free or target returns into per-period values and scale the resulting ratio.
 

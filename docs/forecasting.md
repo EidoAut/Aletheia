@@ -21,7 +21,7 @@ The point forecast statistic is explicit, so mean and median forecasts are not s
 
 `StateSpaceForecastModel` fits a local-linear Kalman model to log NAV levels at each training cutoff. The observation, level, and trend noise variances are deterministic heuristics scaled from historical log-return variance; they are not presented as maximum-likelihood hyperparameters. For a horizon of `H` effective observations, the terminal log-NAV forecast is differenced against the last observed log NAV:
 
-\[
+$$
 \begin{aligned}
 \mu_{T,H} &= \widehat{L}_{T+H} - L_T,\\
 \sigma^2_{T,H} &= \widehat{\operatorname{Var}}(L_{T+H}),\\
@@ -30,7 +30,7 @@ The point forecast statistic is explicit, so mean and median forecasts are not s
 \operatorname{MedianSimpleReturn}
 &= \exp(\mu_{T,H})-1
 \end{aligned}
-\]
+$$
 
 Probability and quantile outputs use the standard normal CDF and inverse CDF over cumulative log-return space, then convert back to simple returns.
 
@@ -40,14 +40,14 @@ The adapter rejects projected distributions when cumulative variance is non-fini
 
 `ForecastEnsemble` combines eligible forecast distributions with validation-weighted exponential weights:
 
-\[
+$$
 \begin{aligned}
 \tilde{w}_i
 &= \exp\left[-\lambda\left(L_i + C_i\right)\right],\\
 w_i
 &= \frac{\tilde{w}_i}{\sum_j \tilde{w}_j}
 \end{aligned}
-\]
+$$
 
 Models with insufficient validation evidence, mismatched validation horizon, ineligible rankings, invalid loss, or non-positive relative skill receive zero weight through exclusion from the eligible set. Evidence from a 90-day arena, for example, cannot weight a 365-day forecast.
 

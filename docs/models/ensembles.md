@@ -12,11 +12,11 @@ under comparable validation evidence.
 
 Forecast ensemble weights use validation loss and calibration penalty:
 
-\[
+$$
 w_i = \frac{\exp(-\lambda (L_i + C_i))}{\sum_j \exp(-\lambda (L_j + C_j))}
-\]
+$$
 
-where \(L_i\) is the validated loss and \(C_i\) is the calibration penalty for eligible model \(i\).
+where $L_i$ is the validated loss and $C_i$ is the calibration penalty for eligible model $i$.
 
 Expected returns and probabilities are combined linearly. Quantiles are obtained by inverting an
 approximate weighted mixture CDF rather than averaging percentile values.

@@ -9,14 +9,14 @@ simple and useful as a transparent benchmark.
 
 ## Mathematical Definition
 
-For log return \(g_t\):
+For log return $g_t$:
 
-\[
+$$
 g_t = c + \phi g_{t-1} + \epsilon_t
-\]
+$$
 
-where \(c\) is an intercept, \(\phi\) is the lag coefficient, and \(\epsilon_t\) is innovation noise.
-Aletheia rejects the fitted model for forecasting when \(|\phi| \ge 1\).
+where $c$ is an intercept, $\phi$ is the lag coefficient, and $\epsilon_t$ is innovation noise.
+Aletheia rejects the fitted model for forecasting when $|\phi| \ge 1$.
 
 ## Implementation in Aletheia
 

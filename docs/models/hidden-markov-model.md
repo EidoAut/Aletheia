@@ -10,17 +10,17 @@ volatile regimes. The state is not observed directly; it is inferred probabilist
 
 ## Mathematical Definition
 
-Let \(z_t\) be a hidden state and \(x_t\) be the observed return:
+Let $z_t$ be a hidden state and $x_t$ be the observed return:
 
-\[
+$$
 P(z_t = j \mid z_{t-1}=i) = A_{ij}
-\]
+$$
 
-\[
+$$
 x_t \mid z_t=j \sim N(\mu_j, \sigma_j^2)
-\]
+$$
 
-where \(A\) is the transition matrix and each state has a Gaussian mean and variance.
+where $A$ is the transition matrix and each state has a Gaussian mean and variance.
 
 ## Implementation in Aletheia
 

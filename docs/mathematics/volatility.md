@@ -8,15 +8,15 @@ Volatility estimates dispersion of periodic returns.
 
 Milestone 1 uses sample standard deviation:
 
-\[
+$$
 s = \sqrt{\frac{\sum_{i=1}^{n}(r_i-\bar{r})^2}{n-1}}
-\]
+$$
 
 Annualized volatility is:
 
-\[
+$$
 s_{\text{annual}} = s_{\text{period}}\sqrt{\operatorname{periods\_per\_year}}
-\]
+$$
 
 `periods_per_year` is resolved from `ObservationFrequency` by the annualization convention:
 
