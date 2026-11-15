@@ -5,7 +5,7 @@
 
 **Quantitative research and fund analytics**
 
-An open-source platform for quantitative investment research, time-series analytics, forecasting and evidence-based validation.
+<p align="justify">An open-source platform for quantitative investment research, time-series analytics, forecasting and evidence-based validation.</p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-5bbc85.svg)](LICENSE)
 
@@ -19,7 +19,7 @@ An open-source platform for quantitative investment research, time-series analyt
 
 **Aletheia is an open-source quantitative fund analysis and forecasting platform written in C# that models investment funds as stochastic dynamic systems. It combines time-series analysis, dynamic-state modeling, signal processing, probabilistic forecasting and rigorous out-of-sample validation to study market states, transitions and investment hypotheses.**
 
-Aletheia is a quantitative research and analytical tool. It does not guarantee future investment performance.
+<p align="justify">Aletheia is a quantitative research and analytical tool. It does not guarantee future investment performance.</p>
 
 ## Download for Windows
 
@@ -59,9 +59,9 @@ The CLI intentionally reports `NO RELIABLE SIGNAL` for unvalidated decisions and
 
 ## Prerequisites
 
-The preferred toolchain is a stable .NET 8 SDK. The repository accepts any installed SDK from 8.0.100 onward and only rolls to a later major when no compatible .NET 8 SDK is available. Prerelease SDKs are accepted as a fallback so Visual Studio Preview installations can still load the solution. CI installs the latest stable .NET 8 SDK explicitly.
+<p align="justify">The preferred toolchain is a stable .NET 8 SDK. The repository accepts any installed SDK from 8.0.100 onward and only rolls to a later major when no compatible .NET 8 SDK is available. Prerelease SDKs are accepted as a fallback so Visual Studio Preview installations can still load the solution. CI installs the latest stable .NET 8 SDK explicitly.</p>
 
-Verify the SDK resolver before opening or building the solution:
+<p align="justify">Verify the SDK resolver before opening or building the solution:</p>
 
 ```powershell
 dotnet --list-sdks
@@ -135,7 +135,7 @@ deployment with a notice.
 
 ## Scientific Rules
 
-Aletheia treats historical evidence carefully:
+<p align="justify">Aletheia treats historical evidence carefully:</p>
 
 - Correlation is not causation.
 - A Fourier peak is not automatically a tradeable cycle.
