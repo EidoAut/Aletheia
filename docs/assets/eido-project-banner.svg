@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="180" viewBox="0 0 1100 180" role="img" aria-label="Aletheia — EIDO Automation">
   <rect width="1100" height="180" fill="#101816"/>
-  <text x="48" y="65" fill="#dce6e0" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="600" letter-spacing="3">EIDO</text>
-  <line x1="48" y1="84" x2="1052" y2="84" stroke="#416752" stroke-width="1"/>
-  <text x="48" y="138" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="500">Aletheia</text>
+  <g fill="none" stroke="#71ad89" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M43 105l19-26 15 13 23-39 19 20"/><path d="M45 112h72"/></g>
+  <text x="148" y="65" fill="#dce6e0" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="600" letter-spacing="3">EIDO</text>
+  <line x1="148" y1="84" x2="1052" y2="84" stroke="#416752" stroke-width="1"/>
+  <text x="148" y="138" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="500">Aletheia</text>
 </svg>
