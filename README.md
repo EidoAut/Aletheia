@@ -1,4 +1,17 @@
+<!-- EIDO repository presentation. Detailed project documentation is preserved below. -->
+<p align="center"><img src="docs/assets/eido-project-banner.svg" alt="Aletheia — EIDO Automation" width="100%"></p>
+
 # Aletheia
+
+**Quantitative research and fund analytics**
+
+An open-source platform for quantitative investment research, time-series analytics, forecasting and evidence-based validation.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-5bbc85.svg)](LICENSE)
+
+**Maintained by [EIDO Automation](https://github.com/EidoAut).** See the [MIT license](LICENSE). Check the documented prerequisites, constraints and validation status before deploying.
+
+## Project documentation
 
 <p align="center">
   <img src="docs/assets/aletheia-overview.png" alt="Aletheia desktop overview" width="100%" />
