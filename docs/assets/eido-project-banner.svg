@@ -1,7 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="180" viewBox="0 0 1100 180" role="img" aria-label="Aletheia — EIDO Automation">
-  <rect width="1100" height="180" fill="#101816"/>
-  <g fill="none" stroke="#71ad89" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M43 105l19-26 15 13 23-39 19 20"/><path d="M45 112h72"/></g>
-  <text x="148" y="65" fill="#dce6e0" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="600" letter-spacing="3">EIDO</text>
-  <line x1="148" y1="84" x2="1052" y2="84" stroke="#416752" stroke-width="1"/>
-  <text x="148" y="138" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="500">Aletheia</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="220" viewBox="0 0 1100 220" role="img" aria-label="Aletheia — EIDO Automation">
+  <rect width="1100" height="220" fill="#101816"/>
+  <g fill="none" stroke="#8cca9c" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path d="M53 149V52m0 97h128"/><path d="M67 122l23-27 22 13 28-43 28 19"/><circle cx="90" cy="95" r="4"/><circle cx="112" cy="108" r="4"/><circle cx="140" cy="65" r="4"/><circle cx="168" cy="84" r="4"/></g>
+  <line x1="224" y1="47" x2="224" y2="175" stroke="#365c48" stroke-width="2"/>
+  <text x="262" y="86" fill="#c7d7cd" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="600" letter-spacing="4">EIDO AUTOMATION</text>
+  <text x="258" y="154" fill="#f3f6f3" font-family="Arial,Helvetica,sans-serif" font-size="65" font-weight="600">Aletheia</text>
+  <text x="262" y="188" fill="#8da599" font-family="Arial,Helvetica,sans-serif" font-size="17" letter-spacing="2">QUANTITATIVE RESEARCH</text>
 </svg>
